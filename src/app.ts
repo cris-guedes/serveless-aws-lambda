@@ -1,14 +1,8 @@
 import axios from "axios";
 import dotenv from "dotenv";
-dotenv.config();
 
-export const lambdaHandler = async (): Promise<void> => {
-  await axios({
-    baseURL: process.env.BASE_ENDPOINT_URL,
-    method: "POST",
-    auth: {
-      username: "someUsername",
-      password: "Somepassword",
-    },
-  });
+export const lambdaHandler = async () => {
+  console.log(process.env.BASE_ENDPOINT_URL);
+  console.log(process.env.AUTH_USER);
+  console.log(process.env.AUTH_PASSWORD);
 };
