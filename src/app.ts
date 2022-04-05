@@ -1,5 +1,4 @@
 import axios from "axios";
-import dotenv from "dotenv";
 
 export const lambdaHandler = async () => {
   console.log(process.env.BASE_ENDPOINT_URL);

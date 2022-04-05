@@ -11,8 +11,7 @@
     "serverless": "^3.10.0"
   },
   "scripts": {
-    "dev": "./env.sh && tsc && serverless invoke local  --BASE_ENDPOINT_URL=https://1c19-138-204-72-53.ngrok.io/api/cronjob",
-    "deploy": "serverless deploy -f cron --verbose"
+    "dev": "tsc && serverless invoke local -f cron"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
