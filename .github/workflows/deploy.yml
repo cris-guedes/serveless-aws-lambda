@@ -6,7 +6,7 @@ on:
 jobs:
   deploy:
     name: deploy
-    runs-on: ubuntu-latest
+    runs-on: 18.04
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 14.x
