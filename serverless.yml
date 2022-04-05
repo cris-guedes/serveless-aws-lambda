@@ -98,9 +98,9 @@ functions:
 
     #    Define function environment variables here
     environment:
-      BASE_ENDPOINT_URL: ${opt:BASE_ENDPOINT_URL}
-      AUTH_USER: ${opt:AUTH_USER}
-      AUTH_PASSWORD: ${opt:AUTH_PASSWORD}
+      BASE_ENDPOINT_URL: ${env:BASE_ENDPOINT_URL}
+      AUTH_USER: ${env:AUTH_USER}
+      AUTH_PASSWORD: ${env:AUTH_PASSWORD}
 # you can add CloudFormation resource templates here
 #resources:
 #  Resources:
