@@ -58,7 +58,7 @@ provider:
 
 functions:
   cron:
-    handler: dist/src/index.Handler
+    handler: ./dist/src/index.handler
     #events:
     #- schedule: rate(1 minute)
     #    The following are a few example events you can configure
