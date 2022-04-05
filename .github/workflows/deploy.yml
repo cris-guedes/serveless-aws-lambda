@@ -6,7 +6,7 @@ on:
 jobs:
   deploy:
     name: deploy
-    runs-on: 18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 14.x
@@ -16,7 +16,7 @@ jobs:
       - name: serverless deploy
         uses: serverless/github-action@v3
         with:
-          args: serverless deploy --stage=${{ matrix.stages.stage }} --BASE_ENDPOINT_URL=${{secrets.BASE_ENDPOINT_URL}} --AUTH_PASSWORD=${{secrets.AUTH_PASSWORD}} --AUTH_USER=${{secrets.AUTH_USER}} --verbose
+          args: serverless deploy --BASE_ENDPOINT_URL=${{secrets.BASE_ENDPOINT_URL}} --AUTH_PASSWORD=${{secrets.AUTH_PASSWORD}} --AUTH_USER=${{secrets.AUTH_USER}} --verbose
         env:
           #SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
           # or if using AWS credentials directly
