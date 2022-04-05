@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: poc-serverless
+service: poc
 # app and org for use with dashboard.serverless.com
 
 # You can pin your service to only deploy with a specific Serverless version
@@ -23,7 +23,7 @@ provider:
   runtime: nodejs12.x
 
   # you can overwrite defaults here
-  stage: ${opt:stage, 'dev'}
+  stage: dev
   #region: us-east-1
 
 # you can add statements to the Lambda function's IAM Role here
